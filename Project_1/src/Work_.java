@@ -4,6 +4,7 @@ public class Work_ {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		
+		//Introduction of the details of our store
 		System.out.println("    COMMUNICATION STORE,SINTOK,KEDAH    ");
 		System.out.println("            Tel : 0124907822            ");
 		System.out.println("            Store ID : 27000            ");
@@ -15,6 +16,7 @@ public class Work_ {
 		System.out.println("-----------------------------------------------------------");
 		System.out.println();
 		
+		//Array 2D
 		String[] shop = {"1.Internet Shop", "2.Mobile Phone Shop", "3.Laptop Shop", "4.TV Shop"};
 		int number;
 		
@@ -44,6 +46,10 @@ public class Work_ {
 		}
 
 	}
+	
+	
+	
+	
 	
 	public static void InternetShop() {
 		Scanner obj=new Scanner(System.in);
@@ -79,13 +85,12 @@ public class Work_ {
 		System.out.println(" Press 1 to continue");
 		System.out.println("Press 2 to exit ");
 		int c=obj.nextInt();
-		if(c==1) {
-			
 		
+		//If Else Statement
+		if(c==1) {
 		
 		System.out.println();
-		
-		
+	
 		System.out.println("Welcome to Hotlink centre!");
 		System.out.println("You can buy your internet packages here.");
 		System.out.println("Press button 1 to continue your purchase.");
@@ -117,6 +122,7 @@ public class Work_ {
 					 totalprice=price[1];
 					}
 				    else
+				    	//method
 				    	invalidPurchase();
 				}
 				else {
@@ -125,7 +131,7 @@ public class Work_ {
 					
 				}
 			}
-			////if choose weekly press 1
+			//if choose weekly press 1
 			else if(want==1) {
 				System.out.println();
 				System.out.println("Weekly pass.");
@@ -139,13 +145,13 @@ public class Work_ {
 					totalprice=price[2];
 					}
 				    else
+				    	//method
 				    	invalidPurchase();
-			
 				}
 				else {
 					System.out.println("You have canceled your purchase. ");
 					totalprice=price[0];
-		}
+				}
 			}
 		    //if choose monthly press 2
 		    else if(want==2) {
@@ -167,14 +173,17 @@ public class Work_ {
 				    else {
 					    System.out.println("You have canceled your purchase. ");
 					    totalprice=price[0];
-					
-				
-		    }//close else
+				    }
+		    //close else
 		    }
+		   
 			else if(want==3) {//want 3
 				 System.out.println();
+				 
 				 System.out.println("Top Up");
 				 System.out.println(".");
+				 
+				 //Do While
 				 int count=0;
 				 do {
 					 System.out.println("Enter the value you want to top up (RM 10-100");
@@ -189,9 +198,6 @@ public class Work_ {
 				 }while(count==0);
 			    	
 			    }//close want 3
-			  
-		    
-		    
 		    
 		else {//want other than 0,1,2,3
 			System.out.println();
@@ -227,6 +233,8 @@ public class Work_ {
 		}
 	
 	
+	
+	
 	public static void MobileShop() {
 		Scanner in = new Scanner (System.in);
 		
@@ -234,10 +242,12 @@ public class Work_ {
 		  String phone;
 		  int quantity,price = 0;
 		  double total,discount;
-		  
+		 
+		//Introduction to mobile phone store
 		System.out.println("**********Welcome To Communication Mobile Phone Store**********");
 		System.out.println("*****Welcome to MSZ STORE******");
-								
+		
+		//User input the details
 		System.out.print("What is  your name: ");
 		String name = in.nextLine();
 		System.out.println("Name: " + name);
@@ -251,16 +261,19 @@ public class Work_ {
 		System.out.println("Residence: " + residence);
 					
 		System.out.println(); 
-
+        
+		//Mobile Available
         System.out.println("!Mobile Phone Available in our store!");
 		
+        //Using method
 		PhoneList();
 		
 		System.out.println(); 
-		
+	
 		System.out.print("Enter the mobile phone (Enter Number): ");
 		String product = in.nextLine();
 		
+		//Using If Else statement for user to choose the phone
 		if(product.equals("1")) {
 			price = 3899;
 		}    
@@ -305,10 +318,11 @@ public class Work_ {
 	System.out.print("Enter the quantity purchase: ");
 	quantity = in.nextInt();
 	
+	//Numerical data & Expression
 	total = price * quantity;
 	System.out.println("Total: RM " +total);
 	
-	 
+	//Using if else statement for discount
 	if (total >1000) {
 	 discount = total*0.2;
 	 }			 
@@ -316,11 +330,12 @@ public class Work_ {
 	 discount=(total*0.1);
 	}
 	 
-	 
+	 //calculate for user to pay
 	 System.out.println("Need to pay: " +(total-discount));
 	 
 	 System.out.println();
 	 
+	 //While loop
 	 System.out.println("Get your freegift!");
 	 String [] gift = {"Cable phone", "Casing", "Tinted phone"};
 		
@@ -331,7 +346,14 @@ public class Work_ {
 	
 }
 		System.out.println();
-		System.out.println("******THANK YOU COME TO MSZ STORE, HOPE U ENJOYED BUYING IN MSZ STORE!******");
+		
+		//Passing Array To Method
+	    String[] Array = passing();
+	    for(int i=0; i<Array.length; i++) {
+		  System.out.print(Array[i]+ " ");
+	  }
+	    System.out.println();
+	    System.out.println();
 		System.out.println("Closed Sat-Sun");
 		System.out.println("When you spend min RM100 on your next visit to our store.");
 		System.out.println("-Complete a brief survey at-");
@@ -343,10 +365,14 @@ public class Work_ {
 }
 
 		
-		
+	
+	
+	
 	public static void LaptopShop() {
 		
 		System.out.println();
+		
+		//Introduction to Laptop store
 		System.out.println("**********Welcome To Communication Laptop Store**********");
 		Scanner in = new Scanner (System.in);
 		 
@@ -362,13 +388,16 @@ public class Work_ {
 		double discount=0.00;
 		char next=0;
 		double pricetopaid=0.00;
-		
+	    
+		//Method
 		laptopBrand();
 		
+		//For loop
 		for (int i=0; i<52; i++) {
 			System.out.print("*");
 		}
 		
+		//user input
 		System.out.println();
 		System.out.println("Customer Information");
 		System.out.print(counter[0] + ". Enter Your Name: ");
@@ -380,10 +409,11 @@ public class Work_ {
 		
 		
 		do{
-			System.out.println();
+			System.out.println(); 
 			System.out.print("Which Brand of Laptop You Want: ");
 			custLaptop = in.nextInt();
 			
+			//If else statement for user to choose laptop
 			if (custLaptop == 1) {
 				laptopprice = 3600.00;
 			}
@@ -407,6 +437,7 @@ public class Work_ {
 			System.out.print("Quantity You Want To Buy: ");
 			quantity = in.nextInt();
 			
+			//numerical Data & expression
 			totalprice = laptopprice * quantity;
 			
 			amount = amount + totalprice;
@@ -459,6 +490,10 @@ public class Work_ {
 
 	}
 	
+	
+	
+	
+	
 	public static void TVShop() {
 		Scanner in = new Scanner (System.in);
 		
@@ -467,6 +502,7 @@ public class Work_ {
 		char gender;
 		double discount, total;
 		
+		//Introduction to TV store
 		System.out.println();
 		System.out.println("**********Welcome To Communication TV Store**********");
 		System.out.println();
@@ -475,6 +511,8 @@ public class Work_ {
 		System.out.println();
 	
 		//Array 2D
+		//column 0 and 1
+		//row 0,1,2
 		String [][] myname = {{"Mrs", "Mr", "Miss"},
 				              {"Fatin", "Akmal", "Rajh"}
 		};
@@ -652,7 +690,8 @@ public class Work_ {
 		System.out.println("------------------------------------------------");
 		System.out.println( "             NO SIGNATURE REQUIRED             ");
 		System.out.println("------------------------------------------------");
-		System.out.println("Guest Relations Center  :  1300-13-1300");
+		//Method
+		guest();
 
 
 	}
@@ -714,7 +753,17 @@ public class Work_ {
 			System.out.print(num_array[i] + " ");
 		}
 	}
+	public static String[] passing() {
+			String[] welcome = new String[] {"Please,", "come", "again!"};
+			return welcome;
+	}
+	public static void guest() {
+		System.out.println("Guest Relations Center  :  1300-13-1300");
+	}
+	 
+
 }
+
 	
 	
 	
